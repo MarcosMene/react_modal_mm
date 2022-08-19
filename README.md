@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <Button onClick={openModal}>Click Me</Button>
+      <button onClick={openModal}>Click Me</button>
       <Modal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
