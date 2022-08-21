@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 import { MdCheckCircleOutline } from "react-icons/md";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, content }) => {
   return (
     <>
       {showModal ? (
@@ -11,7 +11,7 @@ const Modal = ({ showModal, setShowModal }) => {
           <ModalWrapper showModal={showModal}>
             <ModalContent>
               <MdCheckCircleOutline />
-              <p>Employee created!</p>
+              <p>{content}</p>
             </ModalContent>
             <CloseModalButton
               aria-label="Close modal"
@@ -25,8 +25,9 @@ const Modal = ({ showModal, setShowModal }) => {
 };
 
 const Background = styled.div`
-  background: rgba(27, 63, 23, 0.7);
+  background: rgba(189, 189, 189, 0.7);
   position: fixed;
+  min-height: 100vh;
   top: 0;
   bottom: 0;
   right: 0;
@@ -35,27 +36,33 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  padding: 20px;
+  box-sizing: border-box;
 `;
 
 const ModalWrapper = styled.div`
-  width: 50%;
-  height: 35%;
-  max-width: 500px;
+  max-width: 900px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6);
   background-color: #fff;
   color: #000;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   z-index: 20;
   border-radius: 10px;
+  padding: 10px 40px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  justify-content: space-around;
   align-items: center;
   line-height: 1.8;
   color: #141414;
@@ -64,6 +71,12 @@ const ModalContent = styled.div`
   svg {
     color: green;
     font-size: 4rem;
+    @media (max-width: 680px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -74,8 +87,11 @@ const ModalContent = styled.div`
     font-weight: bold;
     padding-top: 10px;
 
-    @media (max-width: 780px) {
+    @media (max-width: 680px) {
       font-size: 2rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
     }
   }
 `;

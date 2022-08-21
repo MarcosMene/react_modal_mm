@@ -20,11 +20,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 const Modal = _ref => {
   let {
     showModal,
-    setShowModal
+    setShowModal,
+    content
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showModal ? /*#__PURE__*/_react.default.createElement(Background, null, /*#__PURE__*/_react.default.createElement(ModalWrapper, {
     showModal: showModal
-  }, /*#__PURE__*/_react.default.createElement(ModalContent, null, /*#__PURE__*/_react.default.createElement(_md.MdCheckCircleOutline, null), /*#__PURE__*/_react.default.createElement("p", null, "Employee created!")), /*#__PURE__*/_react.default.createElement(CloseModalButton, {
+  }, /*#__PURE__*/_react.default.createElement(ModalContent, null, /*#__PURE__*/_react.default.createElement(_md.MdCheckCircleOutline, null), /*#__PURE__*/_react.default.createElement("p", null, content)), /*#__PURE__*/_react.default.createElement(CloseModalButton, {
     "aria-label": "Close modal",
     onClick: () => setShowModal(prev => !prev)
   }))) : null);

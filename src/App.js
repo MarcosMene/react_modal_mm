@@ -10,7 +10,11 @@ function App() {
   return (
     <div className="App">
       <button onClick={openModal}>Click Me</button>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        content="Employee created!"
+      />
     </div>
   );
 }

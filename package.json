@@ -1,6 +1,6 @@
 {
   "name": "modal_mm",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "private": false,
   "description": "Two test React components",
   "author": "Marcos Meneghetti",
@@ -15,6 +15,10 @@
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosMene/react_modal_mm"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
