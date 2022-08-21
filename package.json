@@ -2,7 +2,7 @@
   "name": "modal_mm",
   "version": "0.1.7",
   "private": false,
-  "description": "Two test React components",
+  "description": "A modal that show any message you want to use",
   "author": "Marcos Meneghetti",
   "keywords": [
     "react",

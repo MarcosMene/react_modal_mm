@@ -41,6 +41,7 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
+  /* width: 20%; */
   max-width: 900px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6);
   background-color: #fff;
@@ -51,22 +52,17 @@ const ModalWrapper = styled.div`
   position: relative;
   z-index: 20;
   border-radius: 10px;
-  padding: 10px 40px;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
+  padding: 10px 20px;
 `;
 
 const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
   align-items: center;
   line-height: 1.8;
   color: #141414;
-  padding: 10px;
+  padding: 10px 0;
 
   svg {
     color: green;

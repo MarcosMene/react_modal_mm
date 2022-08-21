@@ -18,7 +18,7 @@
 
 #### Usage/Example
 
-You can write littles messages inside of the modal. For this example, I have used **content="Employee created!"**.
+You can write little messages inside of the modal. For this example, I have used **content="Employee created!"**.
 
 ```javascript
 import { Modal } from "modal_mm";
