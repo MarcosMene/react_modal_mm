@@ -1,13 +1,14 @@
 {
   "name": "modal_mm",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "description": "A modal that show any message you want to use",
   "author": "Marcos Meneghetti",
   "keywords": [
     "react",
     "components",
-    "ui"
+    "ui",
+    "custom modal"
   ],
   "main": "dist/index.js",
   "module": "dist/index.js",
