@@ -13,7 +13,15 @@ function App() {
       <Modal
         showModal={showModal}
         setShowModal={setShowModal}
-        content="Employee created!"
+        //your custom parameters
+        backgroundColor="#16a92069"
+        colorModal="rgba(215, 246, 207, 1)"
+        iconModal="success"
+        borderModal="40px"
+        content="Hello world!"
+        contentcolor="green"
+        shadowModal="0 5px 16px rgba(18, 39, 3, 1)"
+        //your custom parameters
       />
     </div>
   );

@@ -2,16 +2,40 @@ import React from "react";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 import { MdCheckCircleOutline } from "react-icons/md";
+import { RiCloseCircleLine } from "react-icons/ri";
 
-const Modal = ({ showModal, setShowModal, content }) => {
+const Modal = ({
+  showModal,
+  setShowModal,
+  content,
+  backgroundColor,
+  colorModal,
+  contentcolor,
+  iconModal,
+  shadowModal,
+  borderModal,
+}) => {
   return (
     <>
       {showModal ? (
-        <Background>
-          <ModalWrapper showModal={showModal}>
+        <Background style={{ background: backgroundColor }}>
+          <ModalWrapper
+            showModal={showModal}
+            style={{
+              background: colorModal,
+              boxShadow: shadowModal,
+              borderRadius: borderModal,
+            }}
+          >
             <ModalContent>
-              <MdCheckCircleOutline />
-              <p>{content}</p>
+              {iconModal === "success" && (
+                <MdCheckCircleOutline style={{ color: "green" }} />
+              )}
+              {iconModal === "error" && (
+                <RiCloseCircleLine style={{ color: "red" }} />
+              )}
+
+              <p style={{ color: contentcolor }}>{content}</p>
             </ModalContent>
             <CloseModalButton
               aria-label="Close modal"
@@ -25,7 +49,7 @@ const Modal = ({ showModal, setShowModal, content }) => {
 };
 
 const Background = styled.div`
-  background: rgba(189, 189, 189, 0.7);
+  /* background: rgba(189, 189, 189, 0.7); */
   position: fixed;
   min-height: 100vh;
   top: 0;
@@ -41,9 +65,9 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  /* width: 20%; */
+  min-width: 250px;
   max-width: 900px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6); */
   background-color: #fff;
   color: #000;
   display: flex;
@@ -51,7 +75,7 @@ const ModalWrapper = styled.div`
   align-items: center;
   position: relative;
   z-index: 20;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 10px 20px;
 `;
 
@@ -82,6 +106,7 @@ const ModalContent = styled.div`
     text-align: center;
     font-weight: bold;
     padding-top: 10px;
+    color: #000;
 
     @media (max-width: 680px) {
       font-size: 2rem;
