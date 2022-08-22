@@ -1,6 +1,6 @@
 {
   "name": "modal_mm",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "private": false,
   "description": "A modal that show any message you want to use",
   "author": "Marcos Meneghetti",

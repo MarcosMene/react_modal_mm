@@ -1,6 +1,4 @@
-#### Simple-component-library of React components created using
-
-`create-react-app`
+### Simple-component-library of React components created using create-react-app
 
 <hr>
 
@@ -15,15 +13,25 @@
 `Import {Modal} from 'modal-mm'`
 
 <hr>
-
 #### Usage/Example
+You can change the color of modal's background, you can also change the color of the modal. You can change the text and also its color inside modal. You can decide which icon you want (success or error) or nothing. And also you can change the shadow and the border-radius of the modal. If you decide not to use one, just comment it and it will not appear inside the modal.
 
-You can write little messages inside of the modal.You can change the background color, change the icon (success or error) and the color of the text message.
+For example, I have used:
 
-For this example, I have used **content="Employee created!"**.
+```bash
+  backgroundColor="#16a92069"
+  colorModal="rgba(215, 246, 207, 1)"
+  iconModal="success"
+  borderModal="40px"
+  content="Hello world!"
+  contentcolor="green"
+  shadowModal="0 5px 16px rgba(18, 39, 3, 1).
+```
+
+<hr>
 
 ```javascript
-import { Modal } from "modal_mm";
+import Modal from "./lib/components/Modal";
 import { useState } from "react";
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -39,20 +47,23 @@ function App() {
         showModal={showModal}
         setShowModal={setShowModal}
         //your custom parameters
-        backgroundColor="rgba(196, 196, 196, .6)"
-        colorModal="#fff"
+        backgroundColor="#16a92069"
+        colorModal="rgba(215, 246, 207, 1)"
         iconModal="success"
-        borderModal="15px"
-        content="Employee created!"
-        contentcolor="#000"
-        shadowModal="0 5px 16px rgba(148, 148, 148, 0.6)"
+        borderModal="40px"
+        content="Hello world!"
+        contentcolor="green"
+        shadowModal="0 5px 16px rgba(18, 39, 3, 1)"
         //your custom parameters
       />
     </div>
   );
 }
+
 export default App;
 ```
+
+#### Setup
 
 | Parameter         | Type     | Description                     |
 | :---------------- | :------- | :------------------------------ |
@@ -64,6 +75,8 @@ export default App;
 | `shadowModal`     | `string` | Change the shadow of modal      |
 | `borderModal`     | `string` | Change the border of modal      |
 
+<hr>
+
 **Here an example**
 
-  <img src='./src/assets/images/modal_example.png' width="100%" />
+  <img src='./src/assets/images/modalexamples.png' width="100%" />
