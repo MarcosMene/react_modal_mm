@@ -21,6 +21,7 @@ function App() {
         content="Hello world!"
         contentcolor="green"
         shadowModal="0 5px 16px rgba(18, 39, 3, 1)"
+        fontSizeModal="2rem"
         //your custom parameters
       />
     </div>

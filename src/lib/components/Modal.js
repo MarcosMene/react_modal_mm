@@ -14,6 +14,7 @@ const Modal = ({
   iconModal,
   shadowModal,
   borderModal,
+  fontSizeModal,
 }) => {
   return (
     <>
@@ -35,7 +36,9 @@ const Modal = ({
                 <RiCloseCircleLine style={{ color: "red" }} />
               )}
 
-              <p style={{ color: contentcolor }}>{content}</p>
+              <p style={{ color: contentcolor, fontSize: fontSizeModal }}>
+                {content}
+              </p>
             </ModalContent>
             <CloseModalButton
               aria-label="Close modal"
@@ -89,17 +92,20 @@ const ModalContent = styled.div`
   padding: 10px 0;
 
   svg {
+    margin: 20px;
     color: green;
     font-size: 4rem;
     @media (max-width: 680px) {
       font-size: 3rem;
     }
     @media (max-width: 480px) {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   }
 
   p {
+    margin: 0;
+    padding: 0;
     border-top: 1px solid;
     margin-bottom: 1rem;
     font-size: 2.5rem;
@@ -112,7 +118,7 @@ const ModalContent = styled.div`
       font-size: 2rem;
     }
     @media (max-width: 480px) {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
   }
 `;
