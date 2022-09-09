@@ -8,7 +8,7 @@
 
 #### How import the library
 
-`Import {Modal} from 'modal-mm'`
+`Import {Modal} from 'modal_mm'`
 
 ---
 
