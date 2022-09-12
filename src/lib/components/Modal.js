@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { MdClose } from "react-icons/md";
-import { MdCheckCircleOutline } from "react-icons/md";
-import { RiCloseCircleLine } from "react-icons/ri";
+import Cancel from "../../assets/images/cancel.png";
+import Check from "../../assets/images/check.png";
 
 const Modal = ({
   showModal,
@@ -29,12 +28,8 @@ const Modal = ({
             }}
           >
             <ModalContent>
-              {iconModal === "success" && (
-                <MdCheckCircleOutline style={{ color: "green" }} />
-              )}
-              {iconModal === "error" && (
-                <RiCloseCircleLine style={{ color: "red" }} />
-              )}
+              {iconModal === "success" && <img src={Check} alt="check logo" />}
+              {iconModal === "error" && <img src={Cancel} alt="check logo" />}
 
               <p style={{ color: contentcolor, fontSize: fontSizeModal }}>
                 {content}
@@ -43,7 +38,9 @@ const Modal = ({
             <CloseModalButton
               aria-label="Close modal"
               onClick={() => setShowModal((prev) => !prev)}
-            />
+            >
+              &times;
+            </CloseModalButton>
           </ModalWrapper>
         </Background>
       ) : null}
@@ -91,15 +88,14 @@ const ModalContent = styled.div`
   color: #141414;
   padding: 10px 0;
 
-  svg {
+  img {
     margin: 20px;
-    color: green;
-    font-size: 4rem;
+    width: 60px;
     @media (max-width: 680px) {
-      font-size: 3rem;
+      width: 50px;
     }
     @media (max-width: 480px) {
-      font-size: 2.5rem;
+      width: 40px;
     }
   }
 
@@ -123,7 +119,7 @@ const ModalContent = styled.div`
   }
 `;
 
-const CloseModalButton = styled(MdClose)`
+const CloseModalButton = styled.div`
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -132,6 +128,8 @@ const CloseModalButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 30;
+  font-size: 2rem;
+  font-weight: 900;
 
   :hover {
     color: red;
