@@ -9,9 +9,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _cancel = _interopRequireDefault(require("../../assets/images/cancel.png"));
+var _cancel = _interopRequireDefault(require("./assets/images/cancel.png"));
 
-var _check = _interopRequireDefault(require("../../assets/images/check.png"));
+var _check = _interopRequireDefault(require("./assets/images/check.png"));
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Cancel from "../../assets/images/cancel.png";
-import Check from "../../assets/images/check.png";
+import Cancel from "./assets/images/cancel.png";
+import Check from "./assets/images/check.png";
 
 const Modal = ({
   showModal,

@@ -83,4 +83,4 @@ export default App;
 
 **Here an example**
 
-  <img src='./src/assets/images/modalexamples.png' width="100%" />
+  <img src='./src/lib/components/assets/images/modalexamples.png' width="100%" />
